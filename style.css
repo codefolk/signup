@@ -1,0 +1,194 @@
+@import url('https://fonts.google.com/specimen/Poppins');
+
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(0, 100%, 78%);
+    background-image: url(bg-intro-mobile.png);
+    width: 100%;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    line-height: 120%;
+}
+
+.head h2 {
+    color: white;
+    margin: 10px 5px;
+    text-align: center;
+    line-height: 120%;
+    font-weight: bold;
+}
+
+.head p {
+    width: 35ch;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 5px;
+    font-size: 14px;
+}
+
+.small-box {
+    background-color: hsl(248, 32%, 49%);
+    width: 80%;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    margin: 20px auto;
+}
+
+.small-box p {
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+
+form {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 6px;
+
+
+}
+
+form input {
+    position: relative;
+    top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    width: 85%;
+    margin: 10px;
+    border-radius: 3px;
+}
+
+form button {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    width: 85%;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    font-weight: bold;
+
+}
+
+form p {
+    text-align: center;
+    width: 35ch;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.orange {
+    color: hsl(0, 100%, 74%);
+}
+
+@media (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "head form";
+        grid-auto-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-image: url(bg-intro-desktop.png);
+    }
+
+    .head {
+        width: 100%;
+        height: 100vh;
+        grid-area: head;
+    }
+
+    form {
+        grid-area: form;
+        margin: 20px auto;
+        width: 80%;
+        position: relative;
+        top: 50px;
+        box-shadow: 0 10px 16px 10px rgba(0, 0, 0, 0.3);
+
+    }
+
+    .small-box {
+        grid-area: form;
+        position: relative;
+        bottom: 160px;
+        width: 80%;
+    }
+
+    .head h2 {
+        font-size: 2.5rem;
+        line-height: 100%;
+        width: 90%;
+        text-align: left;
+    }
+
+    .head p {
+        width: 90%;
+        text-align: left;
+        position: relative;
+    }
+
+    .btn {
+        position: relative;
+        top: 10px;
+    }
+
+    form p {
+        margin-top: 10px;
+    }
+
+
+}
+
+@media (min-width: 1024px) {
+    .head p {
+        width: 45ch;
+        position: relative;
+        /* right: 32px; */
+    }
+    .head h2{
+        width:15ch;
+    }
+}
+@media (min-width: 1440px){
+    .head h2{
+        font-size:3rem;
+        width:15ch;
+    } 
+    .head p {
+        right:10px;
+    }
+}
